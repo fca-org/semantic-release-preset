@@ -53,10 +53,23 @@ module.exports = config;
 
 ### Workflows
 
+WordPress site:
+
+```cjs
+const wpSiteConfig = require("@fca/semantic-release-preset/workflows/wordpressSite.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: wpSiteConfig(),
+};
+
+module.exports = config;
+```
+
 WordPress plugin:
 
 ```cjs
-const wpPluginConfig = require("@fca/semantic-release-preset/workflows/wpPluginConfig.cjs");
+const wpPluginConfig = require("@fca/semantic-release-preset/workflows/wordpressPlugin.cjs");
 
 const config = {
   extends: "@fca/semantic-release-preset",
