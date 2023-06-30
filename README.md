@@ -29,7 +29,7 @@ This [shareable configuration](https://github.com/jedmao/semantic-release-npm-gi
 ## Install
 
 ```bash
-$ npm install --save-dev semantic-release @fca-org/semantic-release-preset
+$ npm install --save-dev semantic-release @fca/semantic-release-preset
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ The shareable config can be configured in the [**semantic-release** configuratio
 
 ```json
 {
-  "extends": "@fca-org/semantic-release-preset"
+  "extends": "@fca/semantic-release-preset"
   // Add overrides as needed, but sparingly.
 }
 ```
