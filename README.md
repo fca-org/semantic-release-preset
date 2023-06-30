@@ -36,9 +36,32 @@ $ npm install --save-dev semantic-release @fca/semantic-release-preset
 
 The shareable config can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
 
-```json
-{
-  "extends": "@fca/semantic-release-preset"
-  // Add overrides as needed, but sparingly.
-}
+Since `semantic-release` does not currently allow for the extending of the plugins property, it is best to just inject an appropriate, reusable workflow at this time. Workflows will be added as needed to this repo.
+
+Create a file: `release.config.cjs` in the root of your project:
+
+```cjs
+const myWorkflow = require("@fca/semantic-release-preset/workflows/myWorkflow.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: myWorkflow(),
+};
+
+module.exports = config;
+```
+
+### Workflows
+
+WordPress plugin:
+
+```cjs
+const wpPluginConfig = require("@fca/semantic-release-preset/workflows/wpPluginConfig.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: wpPluginConfig("my-plugin.php"),
+};
+
+module.exports = config;
 ```
