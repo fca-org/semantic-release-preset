@@ -1,0 +1,35 @@
+{
+  "name": "@fca/semantic-release-preset",
+  "version": "1.0.0",
+  "description": "Shareable release configuration for FCA Technology projects",
+  "main": ".releaserc.json",
+  "files": [
+    ".releaserc.json"
+  ],
+  "author": "FCA Technology Team",
+  "homepage": "https://github.com/fca-org/semantic-release-preset",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fca-org/semantic-release-preset"
+  },
+  "keywords": [
+    "semantic-release",
+    "semantic-release-config",
+    "npm",
+    "github",
+    "git",
+    "release",
+    "changelog"
+  ],
+  "dependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "semantic-release-version-bump": "^1.4.1"
+  },
+  "peerDependencies": {
+    "semantic-release": "^21.0.5"
+  },
+  "devDependencies": {
+    "semantic-release": "^21.0.5"
+  }
+}
