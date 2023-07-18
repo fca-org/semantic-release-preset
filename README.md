@@ -53,6 +53,32 @@ module.exports = config;
 
 ### Workflows
 
+ASPX site:
+
+```cjs
+const aspxSite = require("@fca/semantic-release-preset/workflows/aspxSite.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: aspxSite(),
+};
+
+module.exports = config;
+```
+
+Node.js script:
+
+```cjs
+const nodeScript = require("@fca/semantic-release-preset/workflows/nodeScript.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: nodeScript(),
+};
+
+module.exports = config;
+```
+
 WordPress site:
 
 ```cjs
