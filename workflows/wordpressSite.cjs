@@ -1,4 +1,4 @@
-function wordpressSite(pluginFile) {
+function wordpressSite() {
 	return [
 		['@semantic-release/commit-analyzer', {
 			"releaseRules": [
