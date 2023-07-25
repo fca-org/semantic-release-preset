@@ -1,6 +1,6 @@
 {
   "name": "@fca/semantic-release-preset",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Shareable release configuration for FCA Technology projects",
   "main": ".releaserc.json",
   "files": [

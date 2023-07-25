@@ -5,7 +5,8 @@ function aspxSite() {
 				{ "type": "ci", "release": "patch" },
 				{ "type": "docs", "release": "patch" },
 				{ "type": "refactor", "release": "minor" },
-				{ "type": "style", "release": "patch" }
+				{ "type": "style", "release": "patch" },
+				{ "breaking": true, "release": "major" },
 			]
 		}],
 		'@semantic-release/release-notes-generator',
