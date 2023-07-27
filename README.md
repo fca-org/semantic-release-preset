@@ -92,6 +92,19 @@ const config = {
 module.exports = config;
 ```
 
+WordPress theme:
+
+```cjs
+const wpThemeConfig = require("@fca/semantic-release-preset/workflows/wordpressTheme.cjs");
+
+const config = {
+  extends: "@fca/semantic-release-preset",
+  plugins: wpPluginConfig("some/directory/with/uncompiled/css/style.css"),
+};
+
+module.exports = config;
+```
+
 WordPress plugin:
 
 ```cjs
