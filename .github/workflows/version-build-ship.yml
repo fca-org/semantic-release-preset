@@ -5,6 +5,32 @@ on:
       - "main"
 jobs:
   version:
-    name: Version
-    uses: fca-org/github-actions/.github/workflows/semantic-release.yml@main
-    secrets: inherit
+    name: Semantic Release
+    runs-on: ubuntu-latest
+
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install Node.js dependencies
+        run: >
+          npm ci
+
+      - name: Run Semantic Release
+        run: >
+          npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
