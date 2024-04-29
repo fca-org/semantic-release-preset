@@ -3,6 +3,7 @@
   "version": "1.6.1",
   "description": "Shareable release configuration for FCA Technology projects",
   "main": ".releaserc.json",
+  "private": true,
   "files": [
     ".releaserc.json",
     "workflows/*"
