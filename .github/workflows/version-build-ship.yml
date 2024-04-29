@@ -1,0 +1,10 @@
+name: Build & Ship 🚀🪂🚢
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  version:
+    name: Version
+    uses: fca-org/github-actions/.github/workflows/semantic-release.yml@main
+    secrets: inherit
